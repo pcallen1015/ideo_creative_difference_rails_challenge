@@ -29,6 +29,9 @@
                 <strong>
                   <%= question_choice.text %>
                 </strong>
+                <div class="<%= question_choice.score >= 0 ? 'text-success' : 'text-danger' %>">
+                  <%= question_choice.creative_quality.name %> <%= question_choice.score %>
+                </div>
               <% else %>
                 <span class="text-muted">
                   <%= question_choice.text %>
