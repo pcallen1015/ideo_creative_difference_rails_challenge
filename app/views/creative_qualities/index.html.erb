@@ -19,8 +19,11 @@
 
               <hr>
 
+              <div class="progress">
+                <div class="progress-bar progress-bar-<%= creative_quality.color %>" style="width: <%= creative_quality.average_score %>%"></div>
+              </div>
               <p>
-                <strong>Your Score: _______</strong>
+                <strong>Your Score: <%= creative_quality.average_score %></strong>
               </p>
             </div>
           </div>

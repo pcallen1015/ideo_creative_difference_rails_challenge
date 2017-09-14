@@ -14,6 +14,7 @@ class Response < ApplicationRecord
     question_responses_count == Question.count
   end
 
+  # Summarizes the scores for this Response by Creative Quality (min, max, raw, normalized)
   def summarize
     # Map the Creative Qualities to their various scores
     summary = {}

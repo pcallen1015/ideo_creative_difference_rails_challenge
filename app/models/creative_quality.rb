@@ -20,4 +20,21 @@ class CreativeQuality < ApplicationRecord
     end
   end
 
+  # Calculates the average score for this Creative Quality from all Responses
+  def average_score
+    responses = Response.all
+    sum = 0
+    count = 0
+
+    responses.each do |response|
+      r_summary = response.summarize
+      if r_summary[self.name][:nrm]
+        sum += r_summary[self.name][:nrm]
+        count += 1
+      end
+    end
+
+    return (sum/count).round
+  end
+
 end

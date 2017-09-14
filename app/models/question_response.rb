@@ -7,6 +7,7 @@ class QuestionResponse < ApplicationRecord
 
   delegate :question, to: :question_choice
 
+  # Summarizes the scores for this Question Response by Creative Quality (min, max, raw)
   def summarize
     summary = {}
 
