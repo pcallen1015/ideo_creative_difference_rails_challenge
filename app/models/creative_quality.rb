@@ -19,4 +19,5 @@ class CreativeQuality < ApplicationRecord
       self.color = 'default'
     end
   end
+
 end

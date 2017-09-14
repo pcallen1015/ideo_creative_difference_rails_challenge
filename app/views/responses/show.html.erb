@@ -13,6 +13,19 @@
         of
         <%= Question.count %>
         questions
+
+        <hr>
+
+        <% @creative_qualities.each do |creative_quality| %>
+          <div>
+            <strong class="text-<%= creative_quality.color %>"><%= creative_quality.name %>: <%= @summary[creative_quality.name][:nrm] %></strong>
+            <ul>
+              <li>Raw score: <%= @summary[creative_quality.name][:raw] %></li>
+              <li class="text-muted">Min score: <%= @summary[creative_quality.name][:min] %></li>
+              <li class="text-muted">Max score: <%= @summary[creative_quality.name][:max] %></li>
+            </ul>
+          </div>
+        <% end %>
       </div>
     </div>
 
